@@ -1,0 +1,11 @@
+{
+  "name": "proton-ui",
+  "theme": "ui",
+  "version": "0.4.1",
+  "description": "A modern theme for a modern editor",
+  "license": "MIT",
+  "repository": "https://github.com/brentd/proton-ui",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
