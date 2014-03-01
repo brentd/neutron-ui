@@ -13,6 +13,23 @@
   position: relative;
 
   background-color: @tool-panel-background-color;
+
+  .btn {
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    transition: none;
+    &.selected, &:active {
+      background: @background-color-selected;
+    }
+    &:hover {
+      color: @text-color-highlight;
+      border: 1px solid rgba(255,255,255,0.2) !important;
+    }
+  }
+
+  .editor.mini {
+    background: rgba(0,0,0,0.1);
+    height: 27px;
+  }
 }
 
 .inset-panel {

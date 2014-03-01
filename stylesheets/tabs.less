@@ -1,65 +1,58 @@
 @import "ui-variables";
-@tab-radius: 3px;
+
 @modified-icon-width: 8px;
-@tab-skew: 30deg;
-@tab-top-padding: 0;
+@tab-top-padding: 3px;
 @tab-bottom-border-height: 8px;
-@tab-border: 1px solid @tab-border-color;
-@tab-bar-bottom-border-color: #111;
 
 .tab-bar {
   height: @tab-height + @tab-top-padding;
   background: @tab-bar-background-color;
-  padding: 0 13px 0 10px;
+  padding: 0 10px;
   box-sizing: border-box;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: @tab-bottom-border-height;
-    left: 0px;
-    width: 100%;
+  &.list-inline {
+    .tab {
+      padding-left: 12px;
+      padding-right: 18px;
+    }
   }
 
   .tab {
     position: relative;
     top: @tab-top-padding;
     height: @tab-height;
-    line-height: @tab-height;
+    line-height: @tab-height - 5px;
     color: @text-color;
-    padding-left: 0;
-    margin-left: 15px;
     transition: color .1s ease-in;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -18px;
-      height: @tab-height;
-      width: 40px;
-    }
+    border-top: 1px solid transparent;
+    border-radius: 1px 1px 0 0;
 
     .close-icon {
       display: none;
-      transition: color 0.1s;
+      right: 4px;
+
       &:hover {
         color: @text-color-error !important;
-
       }
     }
 
     &.modified:not(:hover) .close-icon {
-      top: @tab-height/2 - @modified-icon-width/2 + 1px;
-      right: 14px;
+      display: block;
+      right: 8px;
+      top: 10px;
       width: @modified-icon-width;
       height: @modified-icon-width;
       border-color: @text-color-info;
+      border-width: 2px;
     }
 
+    // &.modified:not(:hover) {
+    //   color: @text-color-info;
+    // }
+
     &:first-child {
-      margin-left: 20px;
+      margin-left: 0px;
     }
 
     &:hover {
@@ -69,26 +62,32 @@
     }
   }
 
+
+
   .tab.active {
     z-index: 10;
-    line-height: @tab-height - 3px;
+    line-height: @tab-height - 5px;
     color: @text-color-highlight;
 
-    .title{
+    .title {
       position: relative;
       top: 1px;
     }
 
     .close-icon {
-      line-height: @tab-height - 1px;
+      line-height: @tab-height -5px;
       display: block;
     }
 
     &, &:before {
       background-color: @tab-background-color-active;
+      background-image: linear-gradient(
+        lighten(@tab-background-color-active, 2%),
+        @tab-background-color-active
+      );
+      border-top: 1px solid rgba(255,255,255,0.1);
       height: @tab-height;
     }
-
   }
 
   .tab:hover {

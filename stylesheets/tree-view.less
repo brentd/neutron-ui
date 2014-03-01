@@ -1,8 +1,36 @@
 @import "ui-variables";
 
+@bg: desaturate(@app-background-color, 2%);
+
 .tree-view {
   font-size: @font-size;
-  background-color: @tree-background-color;
+  background-image: linear-gradient(lighten(@bg, 1%), darken(@bg, 3%));
+}
+
+.workspace { // specificity
+  .tree-view {
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: inset -1px 0px rgba(0,0,0,0.03);
+
+    // Special styling for the project directory
+    & > .directory > .header {
+      padding-left: 5px;
+      height: 33px;
+      line-height: 32px;
+      background: @tab-bar-background-color;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      span {
+        color: @text-color-highlight;
+      }
+    }
+
+    .entry.list-item, .header.list-item {
+      &:hover {
+        color: @text-color-highlight;
+      }
+    }
+  }
 }
 
 .focusable-panel {

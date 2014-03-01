@@ -1,14 +1,14 @@
 // Colors
 
-@text-color: rgb(101, 115, 127);
+@text-color: #7d868c;
 @text-color-subtle: #484F5A;
-@text-color-highlight: rgb(192,197,206);
-@text-color-selected: rgb(223, 225, 232);
+@text-color-highlight: lighten(@text-color, 40%);
+@text-color-selected: lighten(@text-color, 60%);
 
-@text-color-info: #5786B8;
+@text-color-info: #5f9bda;
 @text-color-success: #68A281;
-@text-color-warning: #AA8A69;
-@text-color-error: #9B4444;
+@text-color-warning: #c69a6d;
+@text-color-error: #c45546;
 
 @text-color-ignored: @text-color-subtle;
 @text-color-added: @text-color-success;
@@ -23,20 +23,21 @@
 @background-color-highlight: rgba(255, 255, 255, 0.07);
 @background-color-selected: #343D46;
 
-@tree-background-color: #232830;
+// The one true bg color
+@app-background-color: #25282e;
 
-@app-background-color: #2B303B;
+@tree-background-color: @app-background-color;
 
-@base-background-color: lighten(@tool-panel-background-color, 5%);
+@base-background-color: lighten(@app-background-color, 4%);
 @base-border-color: rgba(0, 0, 0, 0.5);
 
 @pane-item-background-color: @base-background-color;
-@pane-item-border-color: rgba(0, 0, 0, 0.5);
+@pane-item-border-color: @tab-bar-background-color;
 
-@input-background-color: #1C1F26;
+@input-background-color: @app-background-color;
 @input-border-color: @base-border-color;
 
-@tool-panel-background-color: #1C1F26;
+@tool-panel-background-color: @app-background-color;
 @tool-panel-border-color: transparent;
 
 @inset-panel-background-color: #161719;
@@ -48,15 +49,15 @@
 @overlay-background-color: @tool-panel-background-color;
 @overlay-border-color: @background-color-highlight;
 
-@button-background-color: #1C1F26;
-@button-background-color-hover: #1C1F26;
-@button-background-color-selected: #1C1F26;
+@button-background-color: @app-background-color;
+@button-background-color-hover: @app-background-color;
+@button-background-color-selected: @app-background-color;
 @button-border-color: transparent;
 
-@tab-bar-background-color: rgb(28, 31, 38);
+@tab-bar-background-color: darken(@app-background-color, 3%);
 @tab-bar-border-color: transparent;
-@tab-background-color: #1C1F26;
-@tab-background-color-active: rgb(43, 48, 59);
+@tab-background-color: lighten(@app-background-color, 4%);
+@tab-background-color-active: lighten(@app-background-color, 4%);
 @tab-border-color: transparent;
 
 @tree-view-background-color: @tool-panel-background-color;
