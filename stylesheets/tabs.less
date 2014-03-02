@@ -43,13 +43,8 @@
       top: 10px;
       width: @modified-icon-width;
       height: @modified-icon-width;
-      border-color: @text-color-info;
       border-width: 2px;
     }
-
-    // &.modified:not(:hover) {
-    //   color: @text-color-info;
-    // }
 
     &:first-child {
       margin-left: 0px;
@@ -61,8 +56,6 @@
       }
     }
   }
-
-
 
   .tab.active {
     z-index: 10;
@@ -99,9 +92,11 @@
   }
 
   .placeholder {
-    height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+    height: @tab-height + @tab-top-padding;
+    background: linear-gradient(@text-color-info + 50%, @text-color-info);
     &:after {
-      top: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+      top: @tab-height + @tab-top-padding;
+      background: @text-color-info;
     }
   }
 }
