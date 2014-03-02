@@ -2,11 +2,11 @@
 
 @text-color: #7d868c;
 @text-color-subtle: #484F5A;
-@text-color-highlight: lighten(@text-color, 40%);
+@text-color-highlight: lighten(@text-color, 30%);
 @text-color-selected: lighten(@text-color, 60%);
 
-@text-color-info: #5f9bda;
-@text-color-success: #68A281;
+@text-color-info: #4da4b7;
+@text-color-success: #6ac38a;
 @text-color-warning: #c69a6d;
 @text-color-error: #c45546;
 
@@ -16,10 +16,10 @@
 @text-color-modified: @text-color-warning;
 @text-color-removed: @text-color-error;
 
-@background-color-info: #0098ff;
+@background-color-info: #41a8ce;
 @background-color-success: #17ca65;
 @background-color-warning: #ffaa2c;
-@background-color-error: #c00;
+@background-color-error: #e02b13;
 @background-color-highlight: rgba(255, 255, 255, 0.07);
 @background-color-selected: #343D46;
 
@@ -56,8 +56,8 @@
 
 @tab-bar-background-color: darken(@app-background-color, 3%);
 @tab-bar-border-color: transparent;
-@tab-background-color: lighten(@app-background-color, 4%);
-@tab-background-color-active: lighten(@app-background-color, 4%);
+// @tab-background-color: lighten(@app-background-color, 4%);
+@tab-background-color-active: @base-background-color;
 @tab-border-color: transparent;
 
 @tree-view-background-color: @tool-panel-background-color;
