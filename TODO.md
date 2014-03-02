@@ -4,4 +4,5 @@
     * [ ] Reduce overall number of variables
     * [ ] Consolidate use of rgba() for black/white transparency into variables
   * [ ] Style .settings-view
-  * [ ] Improve search results styles
+  * [x] Improve search results styles
+  * [ ] Fix the project folder to the top of the tree view
