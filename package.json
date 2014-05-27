@@ -1,7 +1,7 @@
 {
   "name": "proton-ui",
   "theme": "ui",
-  "version": "0.2.0",
+  "version": "0.6.0",
   "description": "An (almost) flat theme in shades of gunmetal and medium-contrast colors",
   "license": "MIT",
   "repository": "https://github.com/simko-io/proton-ui",
