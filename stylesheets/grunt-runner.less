@@ -1,0 +1,32 @@
+// Grunt Runner Styling
+
+.grunt-runner-results .panel-body li {
+  font-size: 13px;
+  line-height: 1.4;
+  border-bottom: none;
+
+  &.text-success {
+    color: #A6E22E !important;
+  }
+
+  &.text-warning {
+    color: #E6DB74 !important;
+  }
+
+  &.text-error {
+    color: #F92672 !important;
+  }
+
+}
+
+.grunt-runner-results .grunt-panel-heading[data-status=ready]:before {
+  color: #A6E22E;
+}
+
+.grunt-runner-results .grunt-panel-heading[data-status=warning]:before {
+  color: #E6DB74;
+}
+
+.grunt-runner-results .grunt-panel-heading[data-status=error]:before {
+  color: #F92672;
+}
