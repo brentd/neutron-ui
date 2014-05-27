@@ -1,0 +1,23 @@
+// Git Gutter
+
+.editor .gutter .line-number.git-line-modified {
+  border-left-color: #E6DB74;
+}
+
+.editor .gutter .line-number.git-line-added {
+  border-left-color: #A6E22E;
+}
+
+.editor .gutter .line-number.git-line-removed {
+  border-left-color: #F92672;
+}
+
+.status-modified,
+.list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item {
+  color: fadeout(#E6DB74, 10%) !important;
+}
+
+.status-added,
+.list-group li:not(.list-nested-item).status-added, .list-tree li:not(.list-nested-item).status-added, .list-group li.list-nested-item.status-added > .list-item, .list-tree li.list-nested-item.status-added > .list-item {
+  color: fadeout(#A6E22E, 10%) !important;
+}
