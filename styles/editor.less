@@ -1,26 +1,28 @@
 @import "ui-variables";
 @import "ui-mixins";
 
-.editor.mini {
+atom-text-editor[mini] {
   color: @text-color-highlight;
   background-color: @input-background-color;
   border-radius: @component-border-radius;
 
   line-height: @component-line-height + 2;
   padding-left: @component-padding/2;
+}
 
-  .placeholder-text {
-    color: @text-color-subtle;
-  }
+atom-text-editor[mini].is-focused {
+  transition: background-color 0.1s
+}
+
+atom-text-editor[mini]::shadow {
   .cursor { border-color: #fff; }
   .selection .region { background-color: lighten(@input-background-color, 10%); }
 }
 
-.editor.editor-colors.mini.is-focused {
-  .selection .region { background-color: lighten(@app-background-color, 5%); }
-  transition: background-color 0.1s
+atom-text-editor[mini].is-focused::shadow .selection .region {
+  background-color: lighten(@input-background-color, 15%);
 }
 
-.editor .gutter.drop-shadow {
+atom-text-editor::shadow .gutter.drop-shadow {
   box-shadow: 5px 0 10px rgba(0,0,0,0.1);
 }

@@ -8,7 +8,7 @@
   }
 }
 
-.tool-panel {
+atom-panel {
   .text(normal);
   position: relative;
 
@@ -26,7 +26,7 @@
     }
   }
 
-  .editor.mini {
+  atom-text-editor[mini] {
     background: rgba(0,0,0,0.1);
     height: 27px;
   }
@@ -35,12 +35,6 @@
 .inset-panel {
   position: relative;
   background-color: @inset-panel-background-color;
-}
-
-.is-blurred {
-  .tool-panel,
-  .inset-panel {
-  }
 }
 
 .panel-heading {
