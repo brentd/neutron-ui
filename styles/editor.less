@@ -14,15 +14,15 @@ atom-text-editor[mini].is-focused {
   transition: background-color 0.1s
 }
 
-atom-text-editor[mini]::shadow {
+atom-text-editor[mini].editor {
   .cursor { border-color: #fff; }
   .selection .region { background-color: lighten(@input-background-color, 10%); }
 }
 
-atom-text-editor[mini].is-focused::shadow .selection .region {
+atom-text-editor[mini].is-focused.editor .selection .region {
   background-color: lighten(@input-background-color, 15%);
 }
 
-atom-text-editor::shadow .gutter.drop-shadow {
+atom-text-editor.editor .gutter.syntax--drop-shadow {
   box-shadow: 5px 0 10px rgba(0,0,0,0.1);
 }
